@@ -1,0 +1,9 @@
+As in react sometime the component rerender unnecessary.
+Now using callback function we can stop some callback we can control this as to render when state changed.
+
+usememo and usecallback both are used for optimizing the code.
+
+As sometime we have to find the result which is already calculated which is inefficent way.
+
+useMemo() - this stores the result by the technique of memoiozation 
+usecallback() - it store the function say that we can calculate the result again.
