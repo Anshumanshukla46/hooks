@@ -1,0 +1,37 @@
+1. It will create a mutable variable which will not re-render our component again and again.
+
+example-
+const count = React.useRef(1); // it returns an object as count = {current = initial value}
+
+useEffect(()=>{
+ count.current = count.current+1;
+});
+
+
+2. Also used to access dom as well.
+example-
+
+<input type="text" ref={inputField}/>
+<button onClick={change}>
+	Submit
+<button/>
+
+const inputField = useRef("")
+const change = () =>{
+
+// inputField = {} object
+// inputField.current = input
+// inputField.current.value = <input type="text"/>
+
+inputField.current.value.style.backgroundColor="#fff"
+}
+
+
+    // this UseRef hook does notifies when it's content have been changed 
+    // and changing it's property will not re-render it.
+
+    // while in useState we can initialise the state with either string, number, null, object
+    // but not in the case of useRef
+
+    // UseRef return an object which contain .current in this object
+    // it never re-render even on changes
